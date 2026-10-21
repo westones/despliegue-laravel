@@ -17,6 +17,7 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.PRIVATE_KEY }}
+          command_timeout: 10m
           script: |
             set -eu
             cd /var/www/html/despliegue-laravel
