@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Despliegue Laravel · Firebase Hosting</title>
+  <meta name="description" content="Portada estática del proyecto despliegue-laravel publicada en Firebase Hosting.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23ff2d20'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='white'%3EL%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark">L</span>
+        <span>despliegue-laravel</span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#proyecto">Proyecto</a>
+        <a href="#despliegue">Despliegue</a>
+        <a class="nav-cta" href="https://github.com/westones/despliegue-laravel" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="dot"></span> Firebase Hosting</p>
+          <h1>Despliegue Laravel <span class="accent">en Firebase</span></h1>
+          <p class="lead">
+            Portada estática del proyecto <strong>despliegue-laravel</strong>, publicada en
+            Firebase Hosting y preparada para desplegarse automáticamente desde GitHub.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://proyecto-despliegue-92e63.web.app" target="_blank" rel="noopener">Ver sitio publicado</a>
+            <a class="btn btn-ghost" href="https://github.com/westones/despliegue-laravel" target="_blank" rel="noopener">Repositorio</a>
+          </div>
+          <p class="ci-note"><span class="ci-dot"></span> Desplegado automáticamente con GitHub Actions</p>
+        </div>
+
+        <div class="panel" aria-label="Salida del despliegue">
+          <div class="panel-head">
+            <span class="panel-dot"></span><span class="panel-dot"></span><span class="panel-dot"></span>
+            <span class="panel-title">estado del despliegue</span>
+          </div>
+          <pre class="panel-body"><code><span class="c-muted">$</span> firebase deploy
+<span class="c-ok">✔</span> Deploy complete!
+<span class="c-muted">Hosting URL:</span>
+https://proyecto-despliegue-92e63.web.app</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-tight">
+      <div class="wrap">
+        <div class="notice">
+          <span class="badge">Novedades</span>
+          <h2>Versión actualizada del sitio</h2>
+          <p>Esta versión se ha redesplegado para comprobar que los cambios se reflejan en Firebase Hosting.</p>
+          <ul>
+            <li>Se ha actualizado el título de la página.</li>
+            <li>Se ha añadido este bloque de novedades al cuerpo.</li>
+            <li>Se ha actualizado la fecha de publicación en el pie.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyecto" class="section">
+      <div class="wrap">
+        <h2>Sobre el proyecto</h2>
+        <p class="section-lead">
+          Aplicación Laravel con Vite y Tailwind CSS. Firebase Hosting sirve la parte estática;
+          la lógica PHP se ejecuta en el servidor del proyecto.
+        </p>
+        <div class="grid grid-3">
+          <article class="card">
+            <h3>Backend</h3>
+            <p>Laravel 13 sobre PHP 8.5, con rutas y vistas Blade.</p>
+          </article>
+          <article class="card">
+            <h3>Frontend</h3>
+            <p>Vite + Tailwind CSS 4 para los estilos y los assets compilados.</p>
+          </article>
+          <article class="card">
+            <h3>Entrega</h3>
+            <p>Despliegue manual con Firebase CLI y automatización con GitHub Actions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="despliegue" class="section section-alt">
+      <div class="wrap">
+        <h2>Despliegue</h2>
+        <div class="grid grid-3">
+          <article class="card card-strong">
+            <p class="card-label">Proyecto de Firebase</p>
+            <p class="card-value">proyecto-despliegue-92e63</p>
+            <p class="card-label">Dominio</p>
+            <p class="card-value">proyecto-despliegue-92e63.web.app</p>
+          </article>
+          <article class="card">
+            <p class="card-label">Canal</p>
+            <p class="card-value">live</p>
+            <p class="card-label">Origen</p>
+            <p class="card-value">rama main</p>
+          </article>
+          <article class="card">
+            <p class="card-label">Automatización</p>
+            <p class="card-value">GitHub Actions</p>
+            <p class="card-label">Workflow</p>
+            <p class="card-value">firebase-hosting-merge.yml</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap callout">
+        <h2>¿Cómo se actualiza?</h2>
+        <p>
+          Cada cambio en la rama <code>main</code> ejecuta el workflow de GitHub Actions,
+          que publica automáticamente la nueva versión en el canal <code>live</code> de Firebase Hosting.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>Proyecto <strong>despliegue-laravel</strong> · Firebase Hosting</p>
+      <p class="footer-muted">Última actualización: 4 de noviembre de 2026 · despliegue automático</p>
+    </div>
+  </footer>
+</body>
+</html>
